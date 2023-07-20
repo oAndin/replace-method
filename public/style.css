@@ -101,7 +101,7 @@ article {
     align-items: center;
     background-color: #041e34;
     color: #fafafa;
-    visibility: hidden;
+    display: none;
 }
 
 article div#fun {
@@ -149,6 +149,20 @@ article button {
 
 article button:hover {
     background-color:#4d515a;
+}
+
+article button#reset {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    background-color:#ff0000;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 1s ease-in-out;
+}
+
+article button#reset:hover {
+    background-color:#b50000;
 }
 
 .switch {
