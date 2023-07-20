@@ -25,7 +25,7 @@ subsBtn.onclick = function repla() {
     newString = example.replace(`Lorem`, `${wordSubs}`);
     exampleTxt.innerHTML = newString;
     resetBtb.onclick = function resetText() {
-        exampleTxt.innerHTML = example;
+        exampleTxt.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eaque reprehenderit quo dolorum praesentium quae cupiditate. Nesciunt adipisci nemo veritatis libero. Ex voluptatum aperiam nulla! Quod amet earum ducimus provident!`;
     }
 };
 
