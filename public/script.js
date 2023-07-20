@@ -5,27 +5,29 @@ function startExplaination () {
     `<article>
         <div id="fun">
             <div id="column">
-                <label for="word">Palavra que deseja substituir</label>
+                <label for="word">Palavra que deseja substituir por Lorem</label>
                 <input id="word" type="text" placeholder="CSS">
             </div>
             <textarea name="" id="exampleTxt" cols="30" rows="10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eaque reprehenderit quo dolorum praesentium quae cupiditate. Nesciunt adipisci nemo veritatis libero. Ex voluptatum aperiam nulla! Quod amet earum ducimus provident!</textarea>
             <button>substituir</button>
-            <button id="reset">resetar</button>
+            <button id="resetBtn">resetar</button>
         </div>
     </article>`;
 }
 let wordSubs;
 let example;
 let newString;
-function resetText() {
-    exampleTxt.innerHTML = example;
-}
+
+
 subsBtn.onclick = function repla() {
     wordSubs = word.value;
     example = exampleTxt.value;
     newString = example.replace(`Lorem`, `${wordSubs}`);
     exampleTxt.innerHTML = newString;
-    reset.onclick = resetText();
+    function resetText() {
+        exampleTxt.innerHTML = example;
+    }
+    resetBtn.onClick=resetText()
 };
 
 darkmode.onclick = function darkMode() {
@@ -42,7 +44,6 @@ darkmode.onclick = function darkMode() {
 function showBtn() {
     begin.style.visibility = `visible`;
 }
-setTimeout(showBtn,10000);
 
 begin.onclick = function startFun() {
     mainFun.innerHTML = ``;
@@ -53,3 +54,4 @@ prankBtn.onclick = function prank() {
     prankP.style.visibility = `visible`; 
     setTimeout(startExplaination, 10000);
 }
+setTimeout(showBtn,10000);
