@@ -21,7 +21,7 @@ subsBtn.onclick = function repla() {
     example = exampleTxt.value;
     console.log(wordSubs);
     console.log(example);
-    newString = example.replace(`Lorem`, `${wordSubs}`);
+    newString = example.replaceAll(`Lorem`, `${wordSubs}`);
     exampleTxt.innerHTML = newString;
 };
 
