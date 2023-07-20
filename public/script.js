@@ -24,10 +24,9 @@ subsBtn.onclick = function repla() {
     example = exampleTxt.value;
     newString = example.replace(`Lorem`, `${wordSubs}`);
     exampleTxt.innerHTML = newString;
-    function resetText() {
+    resetBtb.onclick = function resetText() {
         exampleTxt.innerHTML = example;
     }
-    resetBtn.onClick=resetText()
 };
 
 darkmode.onclick = function darkMode() {
